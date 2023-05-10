@@ -14,7 +14,7 @@ function Studentform() {
 
   });
    const Handlechange =(event)=>{
-      const {name ,value} =event.target;
+      const {name ,value} = event.target;
       setformvalues({...formvalues,[name]:value})
      
      
