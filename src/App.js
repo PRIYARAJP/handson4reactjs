@@ -3,6 +3,8 @@ import './App.css';
 import React,{useState } from "react";
 // import Student from './student';
 import Studentform from './studentform';
+import Homepage from './home';
+import ContactS from './Contact';
 function App() {
   const [name, setName]=useState("");
   const [student, setstudent]=useState("");
@@ -11,7 +13,7 @@ function App() {
     setstudent(false)
     setContact(false)
     console.log("jii");
-    setName("HOME PAGE");
+    setName( <Homepage/>);
     // return(<>
     // <h1>Return</h1>
     // </>)
@@ -19,7 +21,7 @@ function App() {
   const Contactpage = ()=>{
     setstudent(false)
     setName(false)
-    setContact("Contact US")
+    setContact( <ContactS></ContactS>);
   
   }
   
