@@ -6,19 +6,29 @@ import Studentform from './studentform';
 function App() {
   const [name, setName]=useState("");
   const [student, setstudent]=useState("");
+  const [Contact, setContact]=useState("");
   const homepage = ()=>{
     setstudent(false)
+    setContact(false)
     console.log("jii");
     setName("HOME PAGE");
     // return(<>
     // <h1>Return</h1>
     // </>)
   }
+  const Contactpage = ()=>{
+    setstudent(false)
+    setName(false)
+    setContact("Contact US")
+  
+  }
+  
   const Studentpage = ()=>{
     setName(false)
-    // console.log("jii");
+    setContact(false)
+    
     setstudent(
-    //  <Student></Student>
+    
     <Studentform/>
       // "HII"
     );
@@ -32,10 +42,11 @@ function App() {
        <div className="bordering">
         <nav className='updates' onClick={()=>{homepage()}}>HOME</nav>
         <nav className='updates' onClick={()=>{Studentpage()}} >Students</nav>
-        <nav className='updates'>Contact US</nav>       
+        <nav className='updates'onClick={()=>{Contactpage()}}>Contact US</nav>       
        </div>
        <h1>{name}</h1>
        <p>{student}</p>
+       <p>{Contact}</p>
       </header>
     </div>
   );
